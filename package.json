@@ -1,0 +1,44 @@
+{
+  "name": "@fmma-npm/new-project",
+  "version": "0.0.5",
+  "description": "Create a new project",
+  "scripts": {
+    "prepublishOnly": "tsc && rollup -c",
+    "build": "tsc && rollup -c",
+    "watch": "tsc -w && rollup -w -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fmma/fmma-npm-new-project.git"
+  },
+  "keywords": [
+    "pl",
+    "language",
+    "compiler",
+    "parser",
+    "interpreter"
+  ],
+  "author": "Frederik Madsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fmma/fmma-npm-new-project/issues"
+  },
+  "bin": {
+    "new-project": "dist/cli.js"
+  },
+  "homepage": "https://github.com/fmma/fmma-npm-new-project#readme",
+  "dependencies": {
+    "@fmma-npm/commander": "../commander/commander",
+    "@fmma-npm/frelude": "../frelude"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "rollup": "2.45.2"
+  },
+  "files": [
+    "dist"
+  ]
+}
